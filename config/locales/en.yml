@@ -30,8 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  wedding_name: "Jack & Jill's Wedding"
-  wedding_couple_names: 'Jack & Jill'
-  wedding_date: 'Saturday, 1 January 2000'
-  wedding_location: 'South Pole'
-  photo_credits: 'Photo Credits: Pexels'
+  wedding_name: "Kalen & Donna's Wedding"
+  wedding_couple_names: 'Kalen & Donna'
+  wedding_date: 'Saturday, 12 September 2020'
+  wedding_location: 'Mayfair Lakes Golf Club'
+  photo_credits: 'Photo Credits: @thelightboxtales'

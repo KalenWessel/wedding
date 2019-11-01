@@ -13,7 +13,7 @@
   }
 
   h1 {
-    margin-top: 200px;
+    margin-top: 350px;
   }
 
   .leader-date {
@@ -24,9 +24,14 @@
   }
 }
 
+#location-img {
+    padding-left: 340px;
+    position: absolute;
+}
+
 #welcome-index-when-where {
   h1 {
-    padding: 3 * $spacer 0;
+    padding: 1 * $spacer 0;
   }
 }
 
@@ -68,13 +73,16 @@
   }
 
   h1 {
-    padding: 3 * $spacer 0;
+    padding: 1 * $spacer 0;
   }
 }
 
 #welcome-index-wedding-plan {
+  h1 {
+      padding: 1 * $spacer 0;
+  }
   h2 {
-    padding-top: 3 * $spacer;
+    padding-top: 1 * $spacer;
     padding-bottom: $spacer;
     text-align: center;
   }

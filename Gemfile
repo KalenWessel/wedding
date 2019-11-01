@@ -30,6 +30,7 @@ gem 'rack-canonical-host'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'auto_strip_attributes'
 gem 'scenic'
+gem 'rest-client'
 
 group :development, :test do
   gem 'rubocop'

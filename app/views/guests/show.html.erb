@@ -1,10 +1,9 @@
+<%= render partial: 'leader' %>
 <div class="container">
   <div class="row">
     <div class="offset-lg-2 col-lg-8">
-      <%= render partial: 'leader' %>
-      <%= render partial: 'rsvp_nav', locals: { active: 1 } %>
 
-      <h2>About You</h2>
+      <h2>Your details</h2>
 
       <%= form_with(model: @guest, method: :patch, local: true, id: 'guest-edit-form') do |form| %>
       <div class="row">
@@ -39,18 +38,18 @@
         </div>
       </div>
 
-      <div class="guest-attending-only">
-      <%= render partial: 'dietary_preferences', locals: { form: form, id_stem: 'guest' } %>
-
       <div class="form-group row">
-        <div class="col-md-3">
-          <%= form.label :songs, 'Song Suggestions', class: 'col-form-label' %>
+        <div class="offset-md-3 col-md-9">
+          <p><strong>Will you be bringing a plus one?</strong></p>
+          <div class="form-check form-check-inline">
+            <%= form.radio_button :diet, 'true', checked: true, id: 'guest_plus_one_true', class: 'form-check-input' %>
+            <%= form.label :diet, 'Yes', value: 'true', class: 'form-check-label' %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= form.radio_button :diet, 'false', id: 'guest_plus_one_false', class: 'form-check-input' %>
+            <%= form.label :diet, 'No', value: 'false', class: 'form-check-label' %>
+          </div>
         </div>
-        <div class="col-md-9">
-          <%= form.text_area :songs, id: 'guest_songs', class: 'form-control' %>
-          <small class="form-text text-muted">We're crowd sourcing our playlist! Choose some songs you'd like to hear.</small>
-        </div>
-      </div>
       </div>
 
       <div class="row guests-buttons">
