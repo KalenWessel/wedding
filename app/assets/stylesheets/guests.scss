@@ -6,8 +6,11 @@
   background: linear-gradient(rgba(28, 13, 10, 0.4), rgba(28, 13, 10, 0.6)),
     image-url("rsvp.jpg") center center no-repeat;
   background-size: cover;
+  height: 820px;
+
 
   h1 {
+    margin-top: 350px;
     color: rgba(255, 255, 255, 0.95);
   }
 }

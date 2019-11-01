@@ -29,12 +29,7 @@ class Guest < ApplicationRecord
     "Dear #{first_name},"
   end
 
-  validates :diet, length: { maximum: 8192 }
-  validates :songs, length: { maximum: 8192 }
-  validates :notes, length: { maximum: 8192 }
-
   has_many :plus_ones, dependent: :destroy
-
   scope :confirmed, -> { where.not(confirmed_at: nil) }
   scope :attending, -> { confirmed.where(attending: true) }
   scope :not_attending, -> { confirmed.where(attending: false) }

@@ -55,4 +55,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {
     host: ENV['CANONICAL_HOST'], port: 3000
   }
+  
+  config.action_mailer.default_url_options = {
+    host: ENV['CANONICAL_HOST'], port: 3000
+  }
 end

@@ -20,7 +20,6 @@ class GuestsController < ApplicationController
       existing_guest = Guest.find_by(email: guest_params[:email])
       if existing_guest
         @guest = existing_guest
-        GuestMailer.welcome_back_email(@guest).deliver_now
         render :new_exists
       else
         render :new

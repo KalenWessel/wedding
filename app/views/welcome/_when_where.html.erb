@@ -6,26 +6,29 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 text-center">
+      <div class="offset-md-3 col-md-6">
         <h2><%= link_to 'wedding.ics' do -%>
-          <%= render partial: 'calendar_svg' %>
+            <div id="location-img">
+            <%= render partial: 'calendar_svg' %>
+            </div>
         <%- end %></h2>
         <p>
-          <strong>12:30pm &ndash; late</strong><br>
+          <strong>2:00pm &ndash; late</strong><br>
           <%= t :wedding_date %><br>
           &nbsp;<br>
         </p>
         <p><%= link_to 'Add to Calendar', 'wedding.ics' %></p>
-      </div>
-      <div class="col-md-6 text-center">
+        <br />
         <h2><%= link_to @google_maps_url do -%>
-          <%= render partial: 'map_marker_svg' %>
+            <div id="location-img">
+            <%= render partial: 'map_marker_svg' %>
+            </div>
         <%- end %></h2>
         <p>
           <%= render partial: 'wedding_address' %>
         </p>
         <p>
-          <%= link_to 'Google Maps', @google_maps_url %>
+          <%= link_to 'Get Directions', @google_maps_url %>
         </p>
       </div>
     </div>

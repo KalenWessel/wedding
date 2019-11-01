@@ -1,9 +1,7 @@
+<%= render partial: 'leader' %>
 <div class="container">
   <div class="row">
     <div class="offset-lg-2 col-lg-8">
-      <%= render partial: 'leader' %>
-      <%= render partial: 'rsvp_nav', locals: { active: 3 } %>
-
       <h2>Confirm</h2>
 
       <%= form_with(model: @guest, url: complete_guest_path(@guest), local: true) do |form| %>
@@ -20,34 +18,18 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-4">
+              Status:
+            </div>
+            <div class="col-md-8">
+              <p><tt><%= if @guest.attending %></tt></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
               Email
             </div>
             <div class="col-md-8">
               <p><tt><%= @guest.email %></tt></p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              Dietary Preferences
-            </div>
-            <div class="col-md-8">
-              <% if @guest.diet.present? %>
-                <pre><%= @guest.diet %></pre>
-              <% else %>
-                <p>(None)</p>
-              <% end %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              Song Suggestions
-            </div>
-            <div class="col-md-8">
-              <% if @guest.songs.present? %>
-                <pre><%= @guest.songs %></pre>
-              <% else %>
-                <p>(None)</p>
-              <% end %>
             </div>
           </div>
           <div class="row">
@@ -58,11 +40,9 @@
         </div>
       </div>
 
-      <h3>Plus Ones</h3>
       <% if @guest.plus_ones.any? %>
+      <h3>Plus One</h3>
         <%= render @guest.plus_ones %>
-      <% else %>
-        <p>(None &mdash; just you.)</p>
       <% end %>
       <% else %>
       <p>Sorry to hear you won't be joining us!</p>
