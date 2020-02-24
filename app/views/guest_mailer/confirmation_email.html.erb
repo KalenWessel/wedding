@@ -1,26 +1,15 @@
 <p><%= @guest.email_safe_salutation %></p>
 
 <% if @guest.attending %>
-<p>We look forward to seeing you!</p>
-<p>September 12th, 2020</p>
-<p>The address is:</p>
-<address><%= render partial: 'application/wedding_address' %></address>
-<h3>Your RSVP</h3>
-<p>Status: <% if @guest.attending %>Attending<% else %>Not Attending<% end %></p>
-<p>Email: <%= @guest.email %></p>
-<% if @guest.plus_ones.any? %>
-<p>Plus One: <%= render @guest.plus_ones %></p>
-<% end %>
-<h3>Itinerary</h3>
+<p>We look forward to seeing you September 12th, 2020 at <b>Mayfair Lakes Golf Club</b>, Richmond, British Columbia, Canada</p>
 <p><strong>2:00pm</strong>: Guests arrive</p>
 <p><strong>2:30pm</strong>: Ceremony begins</p>
 <p><strong>3:30pm</strong>: Champagne hour &amp; games</p>
 <p><strong>5:30pm-late</strong>: Reception</p>
-<h3>Questions and answers</h3>
-<p>Please check <%= link_to 'our wedding website', root_url %> for more information, or you can reply to this email.</p>
+<br>
+<p>If you have any questions please check <%= link_to 'our wedding website', root_url %> for more information, or you can reply to this email.</p>
 <% else %>
 <p>We're sorry to hear you can't make it. We hope to see you another time!</p>
 <% end %>
-
 <p>&nbsp;</p>
 <p><%= t :wedding_couple_names %></p>

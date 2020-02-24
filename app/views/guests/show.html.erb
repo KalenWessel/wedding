@@ -42,11 +42,11 @@
         <div class="offset-md-3 col-md-9">
           <p><strong>Will you be bringing a plus one?</strong></p>
           <div class="form-check form-check-inline">
-            <%= form.radio_button :diet, 'true', checked: true, id: 'guest_plus_one_true', class: 'form-check-input' %>
+            <%= form.radio_button :diet, 'true',  id: 'guest_plus_one_true', class: 'form-check-input' %>
             <%= form.label :diet, 'Yes', value: 'true', class: 'form-check-label' %>
           </div>
           <div class="form-check form-check-inline">
-            <%= form.radio_button :diet, 'false', id: 'guest_plus_one_false', class: 'form-check-input' %>
+            <%= form.radio_button :diet, 'false', checked: true, id: 'guest_plus_one_false', class: 'form-check-input' %>
             <%= form.label :diet, 'No', value: 'false', class: 'form-check-label' %>
           </div>
         </div>
